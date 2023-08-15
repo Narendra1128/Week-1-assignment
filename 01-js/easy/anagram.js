@@ -7,8 +7,21 @@
   - `npm run test-anagram`
 */
 
-function isAnagram(str1, str2) {
-
+function sort(st){
+  var arr_=st.split("")
+  arr_=arr_.sort()
+  return arr_.join("")
 }
-
+function isAnagram(str1, str2) {
+  sorted_1=sort(str1)
+  sorted_2=sort(str2)
+  if(sorted_1==sorted_2){
+    return true
+  }
+  else{
+    return false
+  }
+}
+var output=isAnagram('openai','aiopen')
+console.log(output)
 module.exports = isAnagram;
